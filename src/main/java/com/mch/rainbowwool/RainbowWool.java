@@ -28,9 +28,11 @@ public class RainbowWool{
 	public static String latest;
 	public static boolean isLatest = false;
 	public static boolean warned = false;
+	public static boolean craftingEnabled = true;
 	
     @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY)
     public static CommonProxy proxy;
+	
 
     @EventHandler
 	public void preInit(FMLPreInitializationEvent preEvent) {

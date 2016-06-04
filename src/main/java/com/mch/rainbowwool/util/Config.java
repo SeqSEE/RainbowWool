@@ -20,6 +20,8 @@ public class Config {
 		RainbowWool.config.load();
     	boolean updates = RainbowWool.config.getBoolean("Check for updates:", "Updates", true, "Whether to check for an updated Mod.");
     	RainbowWool.getUpdates = updates;
+    	boolean crafting = RainbowWool.config.getBoolean("Enable crafting:", "Crafting", true, "Whether you can craft Rainbow Wool.");
+    	RainbowWool.craftingEnabled = crafting;
     	RainbowWool.config.save();
     	MinecraftForge.EVENT_BUS.register(RainbowWool.instance);
 		Config.sync();		

@@ -1,6 +1,12 @@
 {
-    "parent": "block/cube_all",
+    "parent": "block/cube",
     "textures": {
-        "all": "rainbowwool:blocks/rainbow_wool"
+        "particle": "rainbowwool:blocks/rainbow_wool",
+        "down": "rainbowwool:blocks/rainbow_wool_end",
+        "up": "rainbowwool:blocks/rainbow_wool_end",
+        "north": "rainbowwool:blocks/rainbow_wool",
+        "east": "rainbowwool:blocks/rainbow_wool",
+        "south": "rainbowwool:blocks/rainbow_wool",
+        "west": "rainbowwool:blocks/rainbow_wool"
     }
 }

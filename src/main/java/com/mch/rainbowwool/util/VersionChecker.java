@@ -64,7 +64,7 @@ public class VersionChecker implements Runnable{
     public static boolean getWarning(PlayerTickEvent event){
     	boolean warned = RainbowWool.warned;
     	if (!warned && event.player.worldObj.isRemote && RainbowWool.isLatest == false && RainbowWool.getUpdates != false){
-            TextComponentString update = new TextComponentString("[Update to " + latestRev + "]");
+            TextComponentString update = new TextComponentString("[Download " + latestRev + "]");
             Style link = new Style();
             link.setBold(true);
            	link.setUnderlined(true);

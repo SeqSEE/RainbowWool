@@ -1,6 +1,8 @@
 package com.mch.rainbowwool.proxy;
 
+import com.mch.rainbowwool.RainbowWool;
 import com.mch.rainbowwool.init.RWBlocks;
+import com.mch.rainbowwool.init.RWRecipes;
 import com.mch.rainbowwool.util.Config;
 import com.mch.rainbowwool.util.VersionChecker;
 
@@ -25,6 +27,9 @@ public class CommonProxy {
 	
 	public void register(FMLPreInitializationEvent preEvent){
 		RWBlocks.register(preEvent);
+		if (RainbowWool.craftingEnabled){
+			RWRecipes.registerRecipes(preEvent);
+		}
 	}
 
 	public void registerRender(FMLInitializationEvent event) {
