@@ -12,7 +12,7 @@ public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent preEvent) {
 		Config.config(preEvent);
-		register();
+		register(preEvent);
 	}
 
 	public void init(FMLInitializationEvent event) {
@@ -23,8 +23,8 @@ public class CommonProxy {
 		VersionChecker.check(postEvent);
 	}
 	
-	public void register(){
-		RWBlocks.register();
+	public void register(FMLPreInitializationEvent preEvent){
+		RWBlocks.register(preEvent);
 	}
 
 	public void registerRender(FMLInitializationEvent event) {

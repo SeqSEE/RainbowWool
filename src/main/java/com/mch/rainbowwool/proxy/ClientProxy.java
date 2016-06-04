@@ -20,6 +20,6 @@ public class ClientProxy extends CommonProxy{
 	
 	@Override
 	public void registerRender(FMLInitializationEvent event){
-		RWBlocks.registerRender();
+		RWBlocks.registerRender(event);
 	}
 }

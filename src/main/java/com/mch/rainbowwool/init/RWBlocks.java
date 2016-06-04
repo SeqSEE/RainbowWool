@@ -12,6 +12,8 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class RWBlocks extends Blocks{
@@ -24,7 +26,7 @@ public class RWBlocks extends Blocks{
 	}
 		
 	
-	public static void register(){
+	public static void register(FMLPreInitializationEvent preEvent){
 		for (Block block : blockList()){
 			GameRegistry.register(block);
 			ItemBlock iBlock = new ItemBlock(block);
@@ -32,7 +34,7 @@ public class RWBlocks extends Blocks{
 		}
 	}
 	
-	public static void registerRender(){
+	public static void registerRender(FMLInitializationEvent event){
 		for (Block block : blockList()){
 		Item item = new Item().getItemFromBlock(block);
 		RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
