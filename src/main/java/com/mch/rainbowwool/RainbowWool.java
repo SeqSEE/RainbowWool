@@ -34,15 +34,6 @@ public class RainbowWool{
 
     @EventHandler
 	public void preInit(FMLPreInitializationEvent preEvent) {
-    	config = new Configuration(preEvent.getSuggestedConfigurationFile());
-    	config.load();
-    	boolean updates = config.getBoolean("Check for updates:", "Updates", true, "Whether to check for an updated Mod.");
-    	getUpdates = updates;
-    	config.save();
-    	 
-    	
-    	MinecraftForge.EVENT_BUS.register(instance);
-		Config.sync();
     	proxy.preInit(preEvent);
     }
     
@@ -53,11 +44,7 @@ public class RainbowWool{
     
     @EventHandler
     public void postInit(FMLPostInitializationEvent postEvent){
-    	if (getUpdates == true){
-		RainbowWool.versionChecker = new VersionChecker();
-    	Thread versionCheckThread = new Thread(RainbowWool.versionChecker, "RainbowWool - VersionChecker");
-    	versionCheckThread.start();
-    	}
+    	proxy.postInit(postEvent);
     }
     
     @SubscribeEvent(priority=EventPriority.NORMAL, receiveCanceled=true)

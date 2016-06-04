@@ -14,6 +14,7 @@ import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.event.ClickEvent;
 import net.minecraft.util.text.event.HoverEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
 public class VersionChecker implements Runnable{
@@ -76,5 +77,13 @@ public class VersionChecker implements Runnable{
     	}
     	return warned;
     }
+
+	public static void check(FMLPostInitializationEvent postEvent) {
+		if (RainbowWool.getUpdates == true){
+			RainbowWool.versionChecker = new VersionChecker();
+	    	Thread versionCheckThread = new Thread(RainbowWool.versionChecker, "RainbowWool - VersionChecker");
+	    	versionCheckThread.start();
+	    }
+	}
 }
 
