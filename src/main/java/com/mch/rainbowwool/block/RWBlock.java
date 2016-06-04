@@ -16,7 +16,7 @@ public class RWBlock extends Block{
 		ResourceLocation location = new ResourceLocation(Reference.ID + ":" + name);
 		this.setRegistryName(location);
 		this.setUnlocalizedName(name);
-		this.setCreativeTab(CreativeTabs.MATERIALS);
+		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 		addToBlocks(this);
 		
 	}

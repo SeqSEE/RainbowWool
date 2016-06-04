@@ -1,15 +1,15 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
+  "modid": "rainbowwool",
+  "name": "RainbowWool",
+  "description": "Quite literally only adds a rainbow Wool block.",
+  "version": "1.9.4-1948-1.0",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
-  "logoFile": "",
+  "authorList": ["SeqSEE"],
+  "credits": "jtrent238 from http://minecraft.curseforge.com/forums",
+  "logoFile": "icon.png",
   "screenshots": [],
   "dependencies": []
 }
